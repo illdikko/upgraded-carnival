@@ -10,90 +10,101 @@
 </head>
 
 <body>
-    <section>
-        <div class="top-container">
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#intro">Intro</a></li>
+                <li class="nav-item"><a href="#skills">Skills</a></li>
+                <li class="nav-item"><a href="#hobbies">Hobbies</a></li>
+                <li class="nav-item"><a href="#contact-me">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro" class="intro-section">
             <div class="title-text">
-                <h1>My name is <span id="coline">Coline</span>,</h1>
+                <h1>My name is <span id="coline">Coline</span></h1>
                 <h2>I'm a programmer in learning.</h2>
             </div>
-            <div class="intro">
-                <div class="intro-pic"><img src="./images/ear.svg" alt="drawing of cat ears" id="cat-ears">
-                    <img src="./images/coline-green.jpg" alt="profile pic of Coline" id="coline-pfp">
+            <div class="intro-content">
+                <div class="intro-pic">
+                    <img src="./images/ear.svg" alt="Drawing of cat ears" id="cat-ears">
+                    <img src="./images/coline-green.jpg" alt="Profile pic of Coline" id="coline-pfp">
                 </div>
                 <div class="intro-txt">
                     <h2>Nice to meet you!</h2>
                     <p>I am currently learning how to code thanks to Angela Yu's Complete 2024 Web Development Bootcamp.
-                        I
-                        am a dedicated cat mom and also do crossstitch and embroidery on my spare time &#127802. </p>
+                        I am a dedicated cat mom and also do cross-stitch and embroidery on my spare time &#127802;</p>
                 </div>
-        </div>
-
-    </section>
-    <section>
-        <div class="middle-container">
             </div>
-            <hr>
-            <div class="skills">
-                <h2>My skills</h2>
-                <div>
-                    <h3>Web Development &#128187</h3>
-                    <p>I started learning web Development in 2022. I started in a dedicated school but I had to quit in
-                        2023. I started learning again on my own a few months later thanks to classes I found on Udemy.
-                    </p>
-                </div>
-                <div>
-                    <h3>Languages &#128172</h3>
-                    <p>I am polyglot! I speak fluently French, English and German. I am currently learnin Dutch!</p>
-                </div>
-                <div>
-                    <h3>Improv Cooking &#127858</h3>
+        </section>
+        <section id="skills" class="skills-section">
+            <h2>My Skills</h2>
+            <div class="middle-container">
+                <article class="skill">
+                    <h3>Web Development &#128187;</h3>
+                    <p>I started learning web development in 2022. I started in a dedicated school but had to quit in
+                        2023.
+                        I started learning again on my own a few months later thanks to classes I found on Udemy.</p>
+                </article>
+                <article class="skill">
+                    <h3>Languages &#128172;</h3>
+                    <p>I am polyglot! I speak fluently French, English, and German. I am currently learning Dutch!</p>
+                </article>
+                <article class="skill">
+                    <h3>Improv Cooking &#127858;</h3>
                     <p>I am the most creative when I need to cook something from scratch with limited ingredients. I am
-                        the queen of emptying the fridge and the pantry, and making it delicious.</p>
-                </div>
+                        the
+                        queen of emptying the fridge and the pantry, and making it delicious.</p>
+                </article>
             </div>
-            <hr>
-            <div class="hobbies">
-                <h2>My hobbies</h2>
-                <div>
-                    <h3>Stitches &#129525</h3>
-                    <p>I started embroidery in december 2023 thanks to a Christmas gift. Stabbing repeatedly my work
-                        while watching true crime documentaries is the best feeling.</p>
-                </div>
-                <div>
-                    <h3>Games &#127918 &#127922</h3>
+        </section>
+        <section id="hobbies" class="hobbies-section">
+            <h2>My Hobbies</h2>
+            <div class="middle-container">
+                <article class="hobby">
+                    <h3>Stitches &#129525;</h3>
+                    <p>I started embroidery in December 2023 thanks to a Christmas gift. Stabbing repeatedly my work
+                        while
+                        watching true crime documentaries is the best feeling.</p>
+                </article>
+                <article class="hobby">
+                    <h3>Games &#127918; &#127922;</h3>
                     <p>I love games in all their forms. I mostly play video games, but I own a massive collection of
-                        boardgames. I used to work as a boardgame sommelier!</p>
-                </div>
-                <div>
-                    <h3>Cats &#128049</h3>
-                    <p>I am the happy mom of three cats, names Itchy, Twix and Olympe. Their wellbeing is one of my
+                        board games. I used to work as a board game sommelier!</p>
+                </article>
+                <article class="hobby">
+                    <h3>Cats &#128049;</h3>
+                    <p>I am the happy mom of three cats, named Itchy, Twix, and Olympe. Their well-being is one of my
                         utmost priorities.</p>
-                </div>
-                <div>
-                    <h3>Plants &#127807</h3>
-                    <p>I started to take care of plants as a form of self care. So far I own 5 plants, which is not a
-                        lot, but I aim to fill my room so that it feels like a jungle. Also, I love the color green.</p>
-                </div>
+                </article>
+                <article class="hobby">
+                    <h3>Plants &#127807;</h3>
+                    <p>I started to take care of plants as a form of self-care. So far I own 5 plants, which is not a
+                        lot,
+                        but I aim to fill my room so that it feels like a jungle. Also, I love the color green.</p>
+                </article>
             </div>
-        </div>
-        <hr>
-        <div class="contact-me">
-            <h2>Contact Me</h2>
-            <h3>We share a common interest? Want to send me pics of your cats?</h3>
-            <p> Feel free to contact me to talk about it at length. I would love to hear about your special interests
-                too! Just click on the button!</p>
-            <div id="contact-btn"><a class="btn" href="mailto:coline.ducourtieux@gmail.com">CONTACT ME</a></div>
-        </div>
-    </section>
-    <section>
-        <div class="bottom-container">
+        </section>
+        <section id="contact-me" class="contact-section">
+            <div class="contact-content">
+                <h2>Contact Me</h2>
+                <h3>We share a common interest? Want to send me pics of your cats?</h3>
+                <p>Feel free to contact me to talk about it at length. I would love to hear about your special
+                    interests
+                    too! Just click on the button!</p>
+                <a class="btn" id="contact-btn" href="mailto:everywhere.anywhere967@silomails.com">CONTACT ME</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
             <a class="footer-link" href="https://www.linkedin.com/in/coline-ducourtieux/">LinkedIn</a>
             <div class="credits">Fonts and svg from <a href="http://www.onlinewebfonts.com">Web Fonts</a>, licensed by
                 CC BY 4.0</div>
             <p class="copyright">© Coline Ducourtieux 2024</p>
         </div>
-    </section>
-
+    </footer>
 </body>
 
 </html>

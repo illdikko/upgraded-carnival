@@ -1,74 +1,166 @@
+/* Police de caractères */
 @font-face {
-    font-family: Delius;
-    src: url(./CSS/fonts/DeliusUnicase-Regular.ttf);
+    font-family: 'Delius';
+    src: url('./CSS/fonts/DeliusUnicase-Regular.ttf');
 }
 
 @font-face {
-    font-family: WorkSans;
-    src: url(./CSS/fonts/WorkSans-VariableFont_wght.ttf);
+    font-family: 'WorkSans';
+    src: url('./CSS/fonts/WorkSans-VariableFont_wght.ttf');
 }
 
 @font-face {
-    font-family: Merriweather;
-    src: url(./CSS/fonts/Merriweather-Regular.ttf);
+    font-family: 'Merriweather';
+    src: url('./CSS/fonts/Merriweather-Regular.ttf');
+}
+
+/* Style général */
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    scroll-snap-stop: always;
 }
 
 body {
     text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
-.top-container{
+/* En-tête et navigation */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1EAE98;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 60px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    height: 100%;
+    line-height: 60px;
+}
+
+.nav-item a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Style général des sections */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    scroll-snap-align: start;
+    min-height: 100vh; /* Chaque section prend au moins toute la hauteur de l'écran */
+    padding-top: 60px; /* Hauteur de la navbar */
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement le contenu */
+}
+
+/* Traitement spécial pour la dernière section pour inclure le footer */
+section:last-of-type {
+    min-height: calc(100vh - 15vh - 100px); /* Hauteur d'écran moins la hauteur du footer (15vh + 100px de padding) */
+    padding-bottom: 0; /* Supprime le padding en bas pour permettre au footer de se coller */
+}
+
+section:nth-of-type(odd) {
     background-color: #FDFFE7;
-    padding-top: 100px;
-    padding-bottom: 100px;
-
 }
 
+section:nth-of-type(even) {
+    background-color: #FFFFFF;
+}
+
+/* Titres et textes */
 h1 {
-    font-family: Delius;
-    font-size: 60px;
+    font-family: 'WorkSans';
+    font-weight: 650;
+    font-size: 50px;
     color: #233E8B;
     padding-bottom: 75px;
 }
 
-#coline {
-    font-size: 80px;
-    color: #1EAE98;
-}
-
-.title-text {
-    display: block;
-    margin: auto
-}
-
 h2 {
-    font-family: WorkSans;
+    font-family: 'WorkSans';
     font-weight: 700;
     font-size: 50px;
     color: #233E8B;
-    padding-bottom: 60px;
+    padding-bottom: 12px;
+    padding-top: 30px;
+}
+
+h2:not(#intro h2) {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 h3 {
-    font-family: Worksans;
+    font-family: 'WorkSans';
     font-size: 35px;
     font-weight: 500;
 }
 
 p {
-    font-family: Merriweather;
+    font-family: 'Merriweather';
     font-size: 20px;
-    max-width: 45% ;
+    max-width: 45%;
     margin: auto;
-    padding: 30px 30px;
+    padding: 30px;
     line-height: 35px;
 }
 
-hr {
-    border: dotted #1EAE98 6px;
-    border-bottom: none;
-    width: 4%;
-    margin: 60px auto;
+/* Section Intro */
+.top-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#coline {
+    font-family: 'Delius';
+    display: block;
+    margin-top: 40px;
+    font-size: 80px;
+    color: #1EAE98;
+}
+
+.title-text h1 {
+    display: inline;
+    margin: auto;
 }
 
 .intro-pic {
@@ -89,61 +181,120 @@ hr {
     border-radius: 50%;
 }
 
-.skills {
-    display: block;
-    justify-content: center;
+/* Section Skills et Hobbies */
+.middle-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 120px;
+    width: 100%;
 }
 
-.hobbies {
-    display: block;
+.skill, .hobby {
+    flex: 1;
+    max-width: 300px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.skill p, .hobby p {
+    text-align: justify;
+    max-width: 100%; /* Permet au paragraphe de prendre toute la largeur de l'article */
+    padding: 15px;
+}
+
+.skill h3, .hobby h3 {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    margin: 15px 0;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+/* Corriger le problème de chevauchement entre les sections */
+.hobbies-section {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+/* Ajuster la section contact pour qu'elle n'apparaisse pas dans la section hobbies */
+.contact-section {
+    min-height: calc(100vh - 15vh - 100px);
+    position: relative;
+    scroll-margin-top: 60px;
 
 }
 
-.contact-me {
-    margin: 0%;
-    display: block;
-
+/* Section Contact */
+.contact-content {
+    margin: auto;
 }
 
 .btn {
     background-color: #1EAE98;
-    font-family: WorkSans;
+    font-family: 'WorkSans';
     font-size: 30px;
     color: #A9F1DF;
     border-radius: 8pt;
     padding: 15px 32px;
     text-decoration: none;
     margin: auto;
+    transition: all 0.3s ease; /* Animation de transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
 }
 
 #contact-btn {
+    display: inline-block;
     margin-top: 60px;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
 }
 
-.bottom-container {
-    display: block;
+/* Footer */
+.footer-container {
     background-color: #A9F1DF;
     padding: 50px;
+    height: 15vh;
+    margin-top: auto; /* Pousser le footer vers le bas */
+    scroll-snap-align: end;
 }
 
 .footer-link {
-    font-family: WorkSans;
+    font-family: 'WorkSans';
     font-size: 25px;
     color: #233E8B;
 }
 
 .credits {
-    font-family: Merriweather;
+    font-family: 'Merriweather';
     font-size: 15px;
     color: #233E8B;
     margin-top: 50px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .copyright {
-    font-family: Merriweather;
+    font-family: 'Merriweather';
     color: #233E8B;
     font-size: 13px;
+}
+
+/* Créer un conteneur pour la dernière section et le footer */
+#contact-section-with-footer {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
