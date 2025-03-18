@@ -145,13 +145,6 @@ p {
     line-height: 35px;
 }
 
-hr {
-    border: dotted #1EAE98 6px;
-    border-bottom: none;
-    width: 4%;
-    margin: 60px auto;
-}
-
 /* Section Intro */
 .top-container {
     padding-top: 100px;
