@@ -10,8 +10,8 @@
 }
 
 @font-face {
-    font-family: 'Merriweather';
-    src: url('./CSS/fonts/Merriweather-Regular.ttf');
+    font-family: 'MonserratAlternates';
+    src: url('./CSS/fonts/MontserratAlternates-Regular.ttf');
 }
 
 /* Style général */
@@ -61,6 +61,7 @@ header {
 .nav-item a {
     text-decoration: none;
     color: #333;
+    font-family: Delius;
     font-weight: bold;
     display: block;
     height: 100%;
@@ -105,7 +106,7 @@ section:nth-of-type(even) {
 
 /* Titres et textes */
 h1 {
-    font-family: 'WorkSans';
+    font-family: 'Delius';
     font-weight: 650;
     font-size: 50px;
     color: #233E8B;
@@ -113,7 +114,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'WorkSans';
+    font-family: 'Delius';
     font-weight: 700;
     font-size: 50px;
     color: #233E8B;
@@ -136,12 +137,19 @@ h3 {
 }
 
 p {
-    font-family: 'Merriweather';
+    font-family: 'MontserratAlternates';
     font-size: 20px;
     max-width: 45%;
     margin: auto;
     padding: 30px;
     line-height: 35px;
+}
+
+hr {
+    border: dotted #1EAE98 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 60px auto;
 }
 
 /* Section Intro */
@@ -151,7 +159,7 @@ p {
 }
 
 #coline {
-    font-family: 'Delius';
+    font-family: 'WorkSans';
     display: block;
     margin-top: 40px;
     font-size: 80px;
@@ -276,7 +284,7 @@ p {
 }
 
 .credits {
-    font-family: 'Merriweather';
+    font-family: 'MontserratAlternates';
     font-size: 15px;
     color: #233E8B;
     margin-top: 50px;
@@ -284,7 +292,7 @@ p {
 }
 
 .copyright {
-    font-family: 'Merriweather';
+    font-family: 'MontserratAlternates';
     color: #233E8B;
     font-size: 13px;
 }
