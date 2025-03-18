@@ -184,6 +184,7 @@ p {
 
 /* Section Skills et Hobbies */
 .middle-container {
+    gap: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -194,7 +195,7 @@ p {
 }
 
 .skill, .hobby {
-    flex: 1;
+    flex: 1 1 25%;
     max-width: 300px;
     margin: 20px;
     display: flex;
@@ -315,12 +316,13 @@ p {
         font-size: 60px;
     }    
     .middle-container {
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         flex-wrap: wrap;
     }
     .skill, .hobby {
-        flex: 0 0 45%;
-        max-width: 45%;
+        flex: 0 0 ;
+        max-width: unset;
     }    
     p {
         max-width: 80%;
