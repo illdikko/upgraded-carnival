@@ -306,3 +306,36 @@ hr {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
+
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 40px;
+    }    
+    h2 {
+        font-size: 36px;
+    }    
+    h3 {
+        font-size: 28px;
+    }    
+    #coline {
+        font-size: 60px;
+    }    
+    .middle-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .skill, .hobby {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }    
+    p {
+        max-width: 80%;
+        padding: 15px;
+        font-size: 18px;
+        line-height: 30px;
+    }    
+    .btn {
+        font-size: 24px;
+    }
+}
