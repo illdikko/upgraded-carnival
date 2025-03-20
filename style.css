@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'MonserratAlternates';
-    src: url('./CSS/fonts/MontserratAlternates-Regular.ttf');
+    src: url('.//fonts/MontserratAlternates-Regular.ttf');
 }
 
 /* Style général */
@@ -81,7 +81,7 @@ main {
 
 section {
     scroll-snap-align: start;
-    min-height: 100vh; /* Chaque section prend au moins toute la hauteur de l'écran */
+    min-height:  100vh; /* Chaque section prend au moins toute la hauteur de l'écran */
     padding-top: 60px; /* Hauteur de la navbar */
     box-sizing: border-box;
     position: relative;
@@ -108,7 +108,7 @@ section:nth-of-type(even) {
 h1 {
     font-family: 'Delius';
     font-weight: 650;
-    font-size: 50px;
+    font-size: 3.125rem;
     color: #233E8B;
     padding-bottom: 75px;
 }
@@ -116,7 +116,7 @@ h1 {
 h2 {
     font-family: 'Delius';
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3.125rem;
     color: #233E8B;
     padding-bottom: 12px;
     padding-top: 30px;
@@ -132,13 +132,13 @@ h2:not(#intro h2) {
 
 h3 {
     font-family: 'WorkSans';
-    font-size: 35px;
+    font-size: 2.1875rem;
     font-weight: 500;
 }
 
 p {
-    font-family: 'MontserratAlternates';
-    font-size: 20px;
+    font-family: 'MonserratAlternates';
+    font-size: 1.25rem;
     max-width: 45%;
     margin: auto;
     padding: 30px;
@@ -154,8 +154,8 @@ p {
 #coline {
     font-family: 'WorkSans';
     display: block;
-    margin-top: 40px;
-    font-size: 80px;
+    margin: 25px;
+    font-size: 5rem;
     color: #1EAE98;
 }
 
@@ -167,8 +167,8 @@ p {
 .intro-pic {
     display: grid;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #cat-ears {
@@ -196,7 +196,7 @@ p {
 
 .skill, .hobby {
     flex: 1 1 25%;
-    max-width: 300px;
+    max-width: 30vw;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -241,7 +241,7 @@ p {
 .btn {
     background-color: #1EAE98;
     font-family: 'WorkSans';
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #A9F1DF;
     border-radius: 8pt;
     padding: 15px 32px;
@@ -273,22 +273,23 @@ p {
 
 .footer-link {
     font-family: 'WorkSans';
-    font-size: 25px;
+    font-size: 1.5625rem;
     color: #233E8B;
 }
 
 .credits {
-    font-family: 'MontserratAlternates';
-    font-size: 15px;
+    font-family: 'MonserratAlternates';
+    font-size: 0.9375rem;
     color: #233E8B;
-    margin-top: 50px;
+    margin-top: 15px;
     margin-bottom: 0;
 }
 
 .copyright {
-    font-family: 'MontserratAlternates';
+    font-family: 'MonserratAlternates';
     color: #233E8B;
-    font-size: 13px;
+    font-size: 0.8125rem;
+    background-color: rebeccapurple;
 }
 
 /* Créer un conteneur pour la dernière section et le footer */
@@ -304,16 +305,16 @@ p {
 
 @media screen and (max-width: 992px) {
     h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }    
     h2 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }    
     h3 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }    
     #coline {
-        font-size: 60px;
+        font-size: 3.75rem;
     }    
     .middle-container {
         flex-direction: column;
@@ -327,10 +328,10 @@ p {
     p {
         max-width: 80%;
         padding: 15px;
-        font-size: 18px;
-        line-height: 30px;
+        font-size: 1.125rem;
+        line-height: 1.875rem;
     }    
     .btn {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }
